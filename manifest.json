@@ -1,0 +1,12 @@
+{
+  "name": "Chicken Buddy AI",
+  "short_name": "Chicken Buddy",
+  "description": "An experienced farmer in your pocket.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2F7F0",
+  "theme_color": "#3D6433",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
