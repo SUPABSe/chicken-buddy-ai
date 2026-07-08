@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces";
+  --font-body: "Inter";
+}
+
+html { -webkit-tap-highlight-color: transparent; }
+body { @apply bg-paddy-50 text-paddy-900 font-body antialiased dark:bg-night-900 dark:text-paddy-50; }
+
+/* Big, calm touch targets everywhere */
+button, a, input, select, textarea { @apply outline-none; }
+:focus-visible { @apply ring-2 ring-yolk-500 ring-offset-2 ring-offset-paddy-50 dark:ring-offset-night-900 rounded-lg; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+.card { @apply rounded-xl2 bg-white shadow-card p-4 dark:bg-night-850 dark:shadow-none dark:ring-1 dark:ring-white/5; }
+.btn-primary { @apply h-12 px-5 rounded-full bg-paddy-600 text-white font-medium active:scale-[.98] transition-transform hover:bg-paddy-700 disabled:opacity-40; }
+.btn-yolk { @apply h-12 px-5 rounded-full bg-yolk-500 text-paddy-900 font-semibold active:scale-[.98] transition-transform hover:bg-yolk-600 disabled:opacity-40; }
+.input { @apply h-12 w-full rounded-xl border border-paddy-100 bg-white px-4 text-base dark:bg-night-800 dark:border-white/10; }
+
+@media print {
+  nav, .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .card { box-shadow: none !important; border: 1px solid #ddd; }
+}
